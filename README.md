@@ -1,10 +1,9 @@
 <div align="center">
-  ![Screenshot 2024-03-01 at 14-02-39 React App](https://github.com/chudisoft/Book-an-Appointment/assets/119929069/776a1149-d8da-4951-b9d3-9ec533d423ff)
-
   <h2><b>Bike Reserves </b></h2>
 </div>
 
 <a name="readme-top"></a>
+![Screenshot 2024-03-01 at 14-02-39 React App](https://github.com/chudisoft/Book-an-Appointment/assets/119929069/02300da1-aba5-4514-afce-6576099d4276)
 
 <!-- TABLE OF CONTENTS -->
 
