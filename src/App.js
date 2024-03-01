@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import MotorcycleList from './components/main/MotorcycleList';
 import AddMotorcycle from './components/main/AddMotorcycle';
@@ -8,23 +8,34 @@ import Delete from './components/delete/Delete';
 import Details from './components/details/Details';
 import ReserveForm from './components/reservations/ReserveForm';
 import Signup from './components/Signup';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import NavigationPanel from './components/NavigationPanel';
 
-const App = () => (
-  <div className="app">
-    <div id="mainContainer">
-      <Routes>
-        <Route exact path="/" element={<SignIn />} />
-        <Route exact path="/login" element={<SignIn />} />
-        <Route exact path="/motorcycles" element={<MotorcycleList />} />
-        <Route exact path="/add-motorcycle" element={<AddMotorcycle />} />
-        <Route exact path="/my-reservations" element={<Reservations />} />
-        <Route exact path="/delete-motorcycle" element={<Delete />} />
-        <Route path="/details/:motorcycleId" element={<Details />} />
-        <Route exact path="/reserve" element={<ReserveForm />} />
-        <Route exact path="/signup" element={<Signup />} />
-      </Routes>
+const App = (props) => {
+  const location = useLocation();
+  const showNavigationPanel = !['/', '/login', '/signup'].includes(location.pathname);
+
+  return (
+    <div className="app">
+      <ToastContainer />
+      <div id="mainContainer">
+        {showNavigationPanel && <NavigationPanel />}
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/login" element={<SignIn />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/motorcycles" element={<MotorcycleList />} />
+          <Route path="/add-motorcycle" element={<AddMotorcycle />} />
+          <Route path="/my-reservations" element={<Reservations />} />
+          <Route path="/delete-motorcycle" element={<Delete />} />
+          <Route path="/details/:motorcycleId" element={<Details />} />
+          <Route path="/reserve" element={<ReserveForm />} />
+        </Routes>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default App;

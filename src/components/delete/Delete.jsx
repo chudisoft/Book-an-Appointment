@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { login } from '../../redux/userSlice';
 import { getMotorcycles, deleteMotorcycle } from '../../redux/motorcycleSlice';
-import NavigationPanel from '../NavigationPanel';
 
 const Delete = () => {
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -27,8 +26,7 @@ const Delete = () => {
 
   return (
     <>
-      <NavigationPanel />
-      <div className="delete-container">
+      <div className="side-container delete-container">
         <h2>Delete motorcycle</h2>
         <div className="delete-div">
           {motorcycles.map((motorcycle) => (

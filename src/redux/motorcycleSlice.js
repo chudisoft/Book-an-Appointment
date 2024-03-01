@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const getMotorcycles = createAsyncThunk('getMotorcycles', async (authorization, { getState }) => {
   try {
@@ -59,10 +60,12 @@ const motorcycleSlice = createSlice({
 
     builder.addCase(deleteMotorcycle.fulfilled, (state, action) => {
       state.motorcycles = state.motorcycles.filter((m) => m.id !== action.payload);
+      toast.success('Motorcycle deleted successfully');
     });
 
     builder.addCase(addMotorcycle.fulfilled, (state, action) => {
       state.motorcycles = action.payload.data;
+      toast.success('Motorcycle added successfully');
     });
   },
 });

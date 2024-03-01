@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getUserReservations } from '../../redux/reserveSlice';
 import { getMotorcycles } from '../../redux/motorcycleSlice';
-import NavigationPanel from '../NavigationPanel';
 import './Reservations.css';
 
 const Reservations = () => {
@@ -32,8 +31,7 @@ const Reservations = () => {
 
   return (
     <>
-      <NavigationPanel />
-      <div className="reservations-container">
+      <div className="side-container reservations-container">
         <h2>My Reservations</h2>
         {reservations.length > 0 ? (
           <table className="table">

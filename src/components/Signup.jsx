@@ -26,9 +26,9 @@ const Signup = () => {
   };
 
   return (
-    <section className="container mt-5">
+    <section className="container mt-5 d-flex justify-content-center">
       <div
-        className="card p-4"
+        className="card p-4 col-md-4"
         style={{ border: '1.4px solid #000', borderRadius: '7px' }}
       >
         <h2 className="text-center mb-4">Sign Up</h2>

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Navigate, Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getMotorcycles } from '../../redux/motorcycleSlice';
-import NavigationPanel from '../NavigationPanel';
 import './MotorcycleList.css';
 
 const MotorcycleList = () => {
@@ -32,8 +31,7 @@ const MotorcycleList = () => {
 
   return (
     <>
-      <NavigationPanel />
-      <div className="motorcycle-list-container">
+      <div className="side-container">
         <div className="carousel-container">
           <FaChevronLeft
             className="carousel-arrow"

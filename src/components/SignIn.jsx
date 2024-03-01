@@ -17,9 +17,9 @@ const SignIn = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 d-flex justify-content-center">
       <form
-        className="card p-4"
+        className="card p-4 col-md-4"
         style={{ border: '1.4px solid #000', borderRadius: '7px' }}
         method="post"
         onSubmit={handleLogin}

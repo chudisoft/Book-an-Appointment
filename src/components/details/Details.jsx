@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 import { getMotorcycles } from '../../redux/motorcycleSlice';
-import NavigationPanel from '../NavigationPanel';
 import './Details.css';
 
 const Details = () => {
@@ -32,8 +31,7 @@ const Details = () => {
 
   return (
     <>
-      <NavigationPanel />
-      <div className="details-container">
+      <div className="side-container details-container">
         <h2>Motorcycle Details</h2>
         <div className="details-div">
           {motorcycle && (

@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./src/images/logo.png" alt="Motorcycle"/>
-  <h2><b> SwiftBike Reserves </b></h2>
+  <h2><b>Bike Reserves </b></h2>
 </div>
 
 <a name="readme-top"></a>
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 SwiftBike Reserves <a name="about-project"></a>
+# 📖 Bike Reserves <a name="about-project"></a>
 
-**SwiftBike Reserves** is an app for booking motorcycles. You can sign up and add your own motorcycles to the app. Once you're signed up, you can reserve motorcycles for specific dates and cities. This app is made using React and Rails, making it easy to use. It's a handy tool for people who want to book motorcycles.
+**Bike Reserves** is an app for booking motorcycles. You can sign up and add your own motorcycles to the app. Once you're signed up, you can reserve motorcycles for specific dates and cities. This app is made using React and Rails, making it easy to use. It's a handy tool for people who want to book motorcycles.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -78,7 +78,7 @@ Our team of four used a special Kanban board to split up tasks and see how thing
 
 <a name="rails-backend"></a>
 
-- [SwiftBike Reserves Backend]()
+- [Bike Reserves Backend]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const addReservation = createAsyncThunk('create reservation', async (motorcycleData, { getState }) => {
   try {
@@ -41,15 +42,18 @@ const reserveSlice = createSlice({
     builder
       .addCase(addReservation.fulfilled, (state, action) => {
         state.message = action.payload.message;
+        toast.success(action.payload.message);
       })
       .addCase(addReservation.rejected, (state, action) => {
         state.message = action.payload.message;
+        toast.error(action.payload.message);
       })
       .addCase(getUserReservations.fulfilled, (state, action) => {
         state.reserves = action.payload.data;
       })
       .addCase(getUserReservations.rejected, (state, action) => {
         state.message = action.payload.message;
+        toast.error(action.payload.message);
       });
   },
 });

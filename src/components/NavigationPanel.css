@@ -1,21 +1,28 @@
 .navigation-panel {
-  width: 20%;
-  height: 100vh;
-  background-color: #fff;
+  width: 100%;
+  background-color: #0000000a;
   color: #363636;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-right: 2px solid rgba(237, 224, 224, 0.888);
 }
 
+@media screen and (min-width: 600px) {
+  .navigation-panel {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .navigation-panel {
+    width: 20%;
+  }
+}
+
 .navigation-panel h5 {
   text-align: center;
-  color: #97bf0f;
+  color: rgb(12, 72, 238);
   font-size: 28px;
 }
 
@@ -41,7 +48,7 @@
 }
 
 .navigation-panel ul li a.active {
-  background-color: #97bf0f;
+  background-color: rgb(12, 72, 238);
   color: #fff;
 }
 

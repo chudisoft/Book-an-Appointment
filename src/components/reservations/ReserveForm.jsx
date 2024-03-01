@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './ReserveForm.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
-import NavigationPanel from '../NavigationPanel';
 import { addReservation } from '../../redux/reserveSlice';
 import { getMotorcycles } from '../../redux/motorcycleSlice';
 
@@ -31,7 +30,7 @@ const ReserveForm = () => {
   });
 
   useEffect(() => {
-    if (motorcycleId && motorcycles && motorcycles.length > 0) {
+    if (motorcycleId && motorcycles.length > 0) {
       const selectedMotorcycle = motorcycles.find(
         (m) => m.id === Number(motorcycleId),
       );
@@ -68,8 +67,7 @@ const ReserveForm = () => {
 
   return (
     <>
-      <NavigationPanel />
-      <div className="reserve-form-container">
+      <div className="side-container reserve-form-container">
         <h2>Your Motorcycle, Your Adventure</h2>
         <p>
           Select from our array of motorcycles and book your test ride
@@ -110,15 +108,14 @@ const ReserveForm = () => {
             value={formData.motorcycle_id}
             onChange={handleChange}
           >
-            {motorcycles
-              && motorcycles.map((motorcycle) => (
-                <option key={motorcycle.id} value={motorcycle.id}>
-                  {motorcycle.make}
-                  {' '}
-                  -
-                  {motorcycle.model}
-                </option>
-              ))}
+            {motorcycles.map((motorcycle) => (
+              <option key={motorcycle.id} value={motorcycle.id}>
+                {motorcycle.make}
+                {' '}
+                -
+                {motorcycle.model}
+              </option>
+            ))}
           </select>
           <label htmlFor="city">Select your city:</label>
           <select
